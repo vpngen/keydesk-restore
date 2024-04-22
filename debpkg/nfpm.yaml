@@ -1,0 +1,44 @@
+name: "vgkeydesk-restore"
+arch: "amd64"
+platform: "linux"
+version: ${PACKAGE_VERSION}
+section: "default"
+priority: "optional"
+release: ${PACKAGE_RELEASE}
+
+provides:
+- vgkeydesk-restore
+depends:
+- jq
+
+maintainer: "Ingmund Ollson <ingmund@proton.me>"
+description: VPNGen keydesk restore service
+vendor: "VPNGen"
+homepage: "http://vpngen.org"
+license: "LGPL"
+
+contents:
+- dst: /opt/vgkeydesk-restore
+  type: dir
+  file_info:
+    mode: 0111
+    owner: root
+    group: root
+- src: keydesk-snap/cmd/restorebrigades/restorebrigades.sh
+  dst: /opt/vgkeydesk-restore/restorebrigades.sh
+  file_info:
+    mode: 0005
+    owner: root
+    group: root
+- src: keydesk-snap/cmd/sshcmd/ssh_command.sh
+  dst: /opt/vgkeydesk-restore/ssh_command.sh
+  file_info:
+    mode: 0005
+    owner: root
+    group: root
+
+deb:
+  compression: xz
+  breaks:
+  - vgkeydesk (<< 1.0.0)
+
