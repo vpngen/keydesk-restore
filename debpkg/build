@@ -100,7 +100,7 @@ if [ "$1" = "pkg" ]; then
         exit 0
 fi
 
-GOLANG_VER="$(grep -e "^go\s" "$(dirname "$0")"/../go.mod | awk '{print $2}')"
+GOLANG_VER="1.21"
 
 # Get the current branch
 BRANCH=$(git branch --show-current)
