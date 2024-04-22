@@ -24,13 +24,13 @@ contents:
     mode: 0111
     owner: root
     group: root
-- src: keydesk-snap/cmd/restorebrigades/restorebrigades.sh
+- src: keydesk-restore/cmd/restorebrigades/restorebrigades.sh
   dst: /opt/vgkeydesk-restore/restorebrigades.sh
   file_info:
     mode: 0005
     owner: root
     group: root
-- src: keydesk-snap/cmd/sshcmd/ssh_command.sh
+- src: keydesk-restore/cmd/sshcmd/ssh_command.sh
   dst: /opt/vgkeydesk-restore/ssh_command.sh
   file_info:
     mode: 0005

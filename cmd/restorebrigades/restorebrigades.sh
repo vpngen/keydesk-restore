@@ -99,7 +99,7 @@ create () {
         fi
 
         if [ -z "${DEBUG}" ]; then
-                sudo -u "${brigade_id}" -g "${brigade_id}" /opt/vgkeydesk/reply || fatal "500" "Internal server error" "Can't reply brigade ${brigade_id}"
+                sudo -u "${brigade_id}" -g "${brigade_id}" /opt/vgkeydesk/replay || fatal "500" "Internal server error" "Can't reply brigade ${brigade_id}"
         else
                 echo "DEBUG: sudo -u ${brigade_id} -g ${brigade_id} /opt/vgkeydesk/reply" >&2
         fi
